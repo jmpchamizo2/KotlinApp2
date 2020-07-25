@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.fragment_list.*
+import kotlinx.android.synthetic.main.fragment_list.view.*
 
 
 abstract class BaseListFragment : BaseFragment() {
 
-    val listAdapter: RecyclerView.Adapter<*>
-        get() = getAdapter()
+    lateinit var listAdapter: RecyclerView.Adapter<*>
+
 
     override fun getLayoutResId(): Int {
         return R.layout.fragment_list
@@ -19,9 +19,13 @@ abstract class BaseListFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        listAdapter = getAdapter()
 
-        list.adapter = listAdapter
-        list.layoutManager = LinearLayoutManager(context)
+        with(view.list){
+            adapter = listAdapter
+            layoutManager = LinearLayoutManager(context)
+        }
+
     }
 
 
