@@ -29,6 +29,6 @@ class DealsFragment : BaseListFragment() {
         9.99F,
         80,
         80,
-            "https://www.beahero.gg/wp-content/uploads/2020/04/Counter-Strike-Global-Offensive-imagen1-.jpg"))
+            "http://cdn.akamai.steamstatic.com/steam/apps/10/capsule_184x69.jpg"))
     }
 }

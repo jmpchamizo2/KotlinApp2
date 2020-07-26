@@ -12,4 +12,6 @@ object Routes {
     const val GET_MOST_OWNED_GAMES = "${BASE_URL_STEAM_SPY}?request=top100owned"
     const val GET_DEALS = "${BASE_URL_CHEAP_SHARK}/deals?storeID=${CHEAP_SHARK_STEAM_STORE_ID}"
 
+
+
 }
